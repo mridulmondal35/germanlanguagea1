@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>জার্মান ভাষা শিক্ষা — A1 স্তর | সম্পূর্ণ গাইড</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&family=Hind+Siliguri:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #f6f0e2;
+    --paper-alt: #efe6d2;
+    --ink: #2b2419;
+    --ink-soft: #5c5142;
+    --maroon: #7a2e2e;
+    --maroon-deep: #5c2020;
+    --gold: #a9791f;
+    --line: #d8c9a8;
+    --de-word: #5c2020;
+  }
+
+  *{box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Hind Siliguri','EB Garamond',serif;
+    font-size:17px;
+    line-height:1.85;
+  }
+
+  .page{
+    max-width:760px;
+    margin:0 auto;
+    padding:0 28px 120px;
+  }
+
+  h1,h2,h3,h4{
+    font-family:'Tiro Bangla', serif;
+    color:var(--maroon-deep);
+    font-weight:400;
+    line-height:1.3;
+  }
+
+  .de{
+    font-family:'EB Garamond', serif;
+    color:var(--de-word);
+    font-weight:600;
+    letter-spacing:0.2px;
+  }
+
+  .bn-pron{
+    color:var(--ink-soft);
+    font-style:italic;
+  }
+
+  a{color:var(--maroon);}
+
+  /* ===== COVER ===== */
+  .cover{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:
+      radial-gradient(circle at 20% 15%, rgba(122,46,46,0.08), transparent 40%),
+      radial-gradient(circle at 85% 80%, rgba(169,121,31,0.10), transparent 45%),
+      var(--paper);
+    border-bottom:6px double var(--gold);
+    padding:40px 24px;
+    position:relative;
+  }
+
+  .cover .flagbar{
+    display:flex;
+    gap:6px;
+    margin-bottom:36px;
+  }
+  .cover .flagbar span{
+    width:46px;height:8px;border-radius:2px;
+  }
+  .cover .flagbar span:nth-child(1){background:#1a1a1a;}
+  .cover .flagbar span:nth-child(2){background:var(--maroon);}
+  .cover .flagbar span:nth-child(3){background:var(--gold);}
+
+  .cover .kicker{
+    font-family:'Hind Siliguri', sans-serif;
+    letter-spacing:0.5px;
+    color:var(--ink-soft);
+    font-size:15px;
+    margin-bottom:14px;
+  }
+
+  .cover h1{
+    font-size:52px;
+    margin:0 0 6px;
+    color:var(--maroon-deep);
+  }
+  .cover h1 .sub{
+    display:block;
+    font-size:26px;
+    color:var(--gold);
+    margin-top:10px;
+    font-style:italic;
+  }
+  .cover p.tag{
+    max-width:480px;
+    color:var(--ink-soft);
+    font-size:17px;
+    margin-top:22px;
+  }
+  .cover .badge{
+    margin-top:40px;
+    font-family:'Hind Siliguri',sans-serif;
+    font-size:14px;
+    color:var(--ink-soft);
+    border-top:1px solid var(--line);
+    padding-top:18px;
+  }
+
+  /* ===== TOC ===== */
+  .toc{
+    padding:70px 0 40px;
+    border-bottom:1px solid var(--line);
+  }
+  .toc h2{
+    font-size:30px;
+    margin-bottom:28px;
+    text-align:center;
+  }
+  .toc ol{
+    list-style:none;
+    counter-reset:toc-counter;
+    padding:0;
+    margin:0;
+    columns:1;
+  }
+  .toc li{
+    counter-increment:toc-counter;
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+    padding:9px 0;
+    border-bottom:1px dotted var(--line);
+    font-size:16px;
+  }
+  .toc li::before{
+    content: counter(toc-counter,decimal-leading-zero);
+    color:var(--gold);
+    font-family:'EB Garamond',serif;
+    font-weight:600;
+    min-width:28px;
+  }
+  .toc li a{
+    text-decoration:none;
+    color:var(--ink);
+    flex:1;
+  }
+  .toc li a:hover{color:var(--maroon);}
+
+  /* ===== CHAPTERS ===== */
+  .chapter{
+    padding:64px 0 10px;
+    border-bottom:1px solid var(--line);
+  }
+  .chapter:last-of-type{border-bottom:none;}
+
+  .chapter-eyebrow{
+    font-family:'Hind Siliguri',sans-serif;
+    font-size:13px;
+    color:var(--gold);
+    letter-spacing:1px;
+    margin-bottom:6px;
+  }
+  .chapter h2{
+    font-size:32px;
+    margin:0 0 8px;
+    border-bottom:3px solid var(--maroon);
+    display:inline-block;
+    padding-bottom:6px;
+  }
+  .chapter .lead{
+    color:var(--ink-soft);
+    margin-top:14px;
+    margin-bottom:30px;
+    font-size:16px;
+  }
+
+  h3.section-title{
+    font-size:22px;
+    margin-top:44px;
+    margin-bottom:16px;
+    color:var(--maroon);
+  }
+  h4.sub-title{
+    font-family:'Hind Siliguri',sans-serif;
+    font-size:16px;
+    font-weight:600;
+    color:var(--ink-soft);
+    margin-top:28px;
+    margin-bottom:10px;
+    text-transform:none;
+  }
+
+  /* tables */
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin:18px 0 30px;
+    font-size:15.5px;
+    background:rgba(255,255,255,0.35);
+  }
+  table caption{
+    text-align:left;
+    font-family:'Hind Siliguri',sans-serif;
+    font-size:13px;
+    color:var(--ink-soft);
+    margin-bottom:6px;
+  }
+  th, td{
+    padding:9px 12px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  th{
+    font-family:'Hind Siliguri',sans-serif;
+    font-weight:600;
+    color:var(--maroon-deep);
+    border-bottom:2px solid var(--maroon);
+    font-size:14.5px;
+  }
+  tr:hover td{background:rgba(169,121,31,0.06);}
+
+  /* example sentence blocks */
+  .ex{
+    margin:10px 0;
+    padding:12px 16px;
+    background:var(--paper-alt);
+    border-left:3px solid var(--gold);
+    border-radius:0 4px 4px 0;
+  }
+  .ex .de{display:block;font-size:17px;}
+  .ex .pron{display:block;color:var(--ink-soft);font-style:italic;font-size:14.5px;margin-top:2px;}
+  .ex .meaning{display:block;margin-top:4px;font-size:15px;}
+
+  /* verb cards */
+  .verb-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin:20px 0 34px;
+  }
+  @media (max-width:600px){ .verb-grid{grid-template-columns:1fr;} }
+  .verb-card{
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:14px 16px;
+    background:rgba(255,255,255,0.4);
+  }
+  .verb-card h5{
+    margin:0 0 8px;
+    font-family:'EB Garamond',serif;
+    font-size:18px;
+    color:var(--maroon-deep);
+    font-weight:600;
+  }
+  .verb-card h5 .meaning{
+    font-family:'Hind Siliguri',sans-serif;
+    color:var(--ink-soft);
+    font-size:13.5px;
+    font-weight:400;
+    display:block;
+  }
+  .verb-card .conj{
+    font-size:14px;
+    color:var(--ink);
+  }
+  .verb-card .conj div{padding:1px 0;}
+  .verb-card .conj b{color:var(--de-word);font-family:'EB Garamond',serif;}
+
+  .tag{
+    display:inline-block;
+    font-family:'Hind Siliguri',sans-serif;
+    font-size:11.5px;
+    padding:2px 9px;
+    border-radius:20px;
+    background:var(--maroon);
+    color:var(--paper);
+    margin-bottom:10px;
+  }
+  .tag.alt{background:var(--gold);}
+
+  /* dialogue */
+  .dialogue{
+    background:var(--paper-alt);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:18px 20px;
+    margin:20px 0 30px;
+  }
+  .dialogue .line{margin:7px 0;}
+  .dialogue .speaker{
+    font-family:'Hind Siliguri',sans-serif;
+    font-weight:600;
+    color:var(--maroon-deep);
+  }
+  .dialogue .trans{
+    color:var(--ink-soft);
+    font-size:14.5px;
+    margin-left:14px;
+  }
+
+  .note{
+    font-size:14.5px;
+    color:var(--ink-soft);
+    background:rgba(169,121,31,0.08);
+    border:1px dashed var(--gold);
+    border-radius:6px;
+    padding:12px 16px;
+    margin:16px 0;
+  }
+
+  .to-top{
+    display:inline-block;
+    margin-top:36px;
+    font-family:'Hind Siliguri',sans-serif;
+    font-size:13px;
+    color:var(--ink-soft);
+    text-decoration:none;
+    border:1px solid var(--line);
+    padding:6px 14px;
+    border-radius:20px;
+  }
+  .to-top:hover{border-color:var(--maroon);color:var(--maroon);}
+
+  .colophon{
+    text-align:center;
+    padding:70px 0 40px;
+    color:var(--ink-soft);
+    font-size:14px;
+    font-family:'Hind Siliguri',sans-serif;
+  }
+
+  @media print{
+    .to-top{display:none;}
+    .cover{min-height:auto;page-break-after:always;}
+    .chapter{page-break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<section class="cover">
+  <div class="flagbar"><span></span><span></span><span></span></div>
+  <div class="kicker">A1 স্তর · সম্পূর্ণ শিক্ষা সহায়িকা</div>
+  <h1>জার্মান ভাষা শিক্ষা
+    <span class="sub">Deutsch lernen — বাংলায়</span>
+  </h1>
+  <p class="tag">বর্ণমালা থেকে শুরু করে ব্যাকরণ, শব্দভান্ডার, ক্রিয়ার রূপ এবং বাস্তব কথোপকথন — Ausbildung ও দৈনন্দিন ব্যবহারের জন্য প্রস্তুত করা একটি হাতে-গড়া গাইড।</p>
+  <div class="badge">প্রস্তুতকারী: মৃদুল চন্দ্র মন্ডল &nbsp;•&nbsp; DW Akademie ও ব্যক্তিগত নোট অবলম্বনে সংকলিত</div>
+</section>
+
+<div class="page">
+
+<!-- ============ TOC ============ -->
+<section class="toc" id="toc">
+  <h2>সূচিপত্র</h2>
+  <ol>
+    <li><a href="#ch1">বর্ণমালা ও উচ্চারণ</a></li>
+    <li><a href="#ch2">যুক্তবর্ণ ও ধ্বনিবিজ্ঞান</a></li>
+    <li><a href="#ch3">সর্বনাম (Personal Pronouns)</a></li>
+    <li><a href="#ch4">সংখ্যা (০ থেকে ১০০০)</a></li>
+    <li><a href="#ch5">অভিবাদন ও দৈনন্দিন বাক্য</a></li>
+    <li><a href="#ch6">সপ্তাহের দিন ও মাসের নাম</a></li>
+    <li><a href="#ch7">সময় বলা (Uhrzeit)</a></li>
+    <li><a href="#ch8">আর্টিকেল ও মৌলিক ক্রিয়া (Sein / Haben)</a></li>
+    <li><a href="#ch9">ক্রিয়ার রূপান্তর — সম্পূর্ণ তালিকা</a></li>
+    <li><a href="#ch10">ভোকাবুলারি — বর্ণ অনুযায়ী (DW ফোনেটিক চার্ট)</a></li>
+    <li><a href="#ch11">পরিচিতি পর্ব (Sich vorstellen)</a></li>
+    <li><a href="#ch12">Nomen ও Artikel</a></li>
+    <li><a href="#ch13">Nominativ ও Akkusativ</a></li>
+    <li><a href="#ch14">Possessive Articles</a></li>
+    <li><a href="#ch15">Negation (নেতিবাচক বাক্য)</a></li>
+    <li><a href="#ch16">প্রশ্ন করা (W-Fragen)</a></li>
+    <li><a href="#ch17">Präpositionen</a></li>
+    <li><a href="#ch18">Imperativ</a></li>
+    <li><a href="#ch19">Perfekt (নিকট অতীত)</a></li>
+    <li><a href="#ch20">দৈনন্দিন বিষয়ভিত্তিক শব্দভান্ডার</a></li>
+    <li><a href="#ch21">অনুশীলনের কৌশল ও পরীক্ষা প্রস্তুতি</a></li>
+    <li><a href="#ch22">বাস্তব কথোপকথন (Audiokurs Dialogues)</a></li>
+  </ol>
+</section>
+
+<!-- ============ CH1 ============ -->
+<section class="chapter" id="ch1">
+  <div class="chapter-eyebrow">অধ্যায় ০১</div>
+  <h2>বর্ণমালা ও উচ্চারণ</h2>
+  <p class="lead">জার্মান ভাষায় মোট ২৬টি মূল বর্ণ এবং ৪টি বিশেষ বর্ণ (৩টি Umlaut + ১টি Eszett) রয়েছে।</p>
+
+  <table>
+    <tr><th>বর্ণ</th><th>জার্মান নাম</th><th>বাংলা উচ্চারণ</th><th>উদাহরণ</th></tr>
+    <tr><td class="de">A a</td><td>Aa</td><td class="bn-pron">আ</td><td><span class="de">Apfel</span> (আপফেল) — আপেল</td></tr>
+    <tr><td class="de">B b</td><td>Be</td><td class="bn-pron">বে</td><td><span class="de">Buch</span> (বুখ) — বই</td></tr>
+    <tr><td class="de">C c</td><td>Ce</td><td class="bn-pron">ছে</td><td><span class="de">Computer</span> — কম্পিউটার</td></tr>
+    <tr><td class="de">D d</td><td>De</td><td class="bn-pron">ডে</td><td><span class="de">Danke</span> (ডাঙ্কে) — ধন্যবাদ</td></tr>
+    <tr><td class="de">E e</td><td>Er</td><td class="bn-pron">এ</td><td><span class="de">Elefant</span> — হাতি</td></tr>
+    <tr><td class="de">F f</td><td>Ef</td><td class="bn-pron">এফ</td><td><span class="de">Fisch</span> (ফিশ) — মাছ</td></tr>
+    <tr><td class="de">G g</td><td>Ge</td><td class="bn-pron">গে</td><td><span class="de">Gut</span> (গুট) — ভালো</td></tr>
+    <tr><td class="de">H h</td><td>Ha</td><td class="bn-pron">হা</td><td><span class="de">Haus</span> (হাউস) — বাড়ি</td></tr>
+    <tr><td class="de">I i</td><td>Ii</td><td class="bn-pron">ই</td><td><span class="de">Ich</span> (ইশ) — আমি</td></tr>
+    <tr><td class="de">J j</td><td>Jot</td><td class="bn-pron">ইয়ট</td><td><span class="de">Ja</span> (ইয়া) — হ্যাঁ</td></tr>
+    <tr><td class="de">K k</td><td>Ka</td><td class="bn-pron">কা</td><td><span class="de">Kind</span> (কিন্ড) — শিশু</td></tr>
+    <tr><td class="de">L l</td><td>El</td><td class="bn-pron">এল</td><td><span class="de">Lampe</span> (লাম্পে) — বাতি</td></tr>
+    <tr><td class="de">M m</td><td>Em</td><td class="bn-pron">এম</td><td><span class="de">Mann</span> (মান) — পুরুষ</td></tr>
+    <tr><td class="de">N n</td><td>En</td><td class="bn-pron">এন</td><td><span class="de">Name</span> (নামে) — নাম</td></tr>
+    <tr><td class="de">O o</td><td>Oo</td><td class="bn-pron">ও</td><td><span class="de">Obst</span> (ওব্স্ট) — ফলমূল</td></tr>
+    <tr><td class="de">P p</td><td>Pe</td><td class="bn-pron">পে</td><td><span class="de">Papier</span> — কাগজ</td></tr>
+    <tr><td class="de">Q q</td><td>Ku</td><td class="bn-pron">কু</td><td><span class="de">Quelle</span> (কভেলে) — উৎস</td></tr>
+    <tr><td class="de">R r</td><td>Er</td><td class="bn-pron">এর</td><td><span class="de">Rot</span> (রোট) — লাল</td></tr>
+    <tr><td class="de">S s</td><td>Es</td><td class="bn-pron">এস</td><td><span class="de">Sonne</span> (জনে) — সূর্য</td></tr>
+    <tr><td class="de">T t</td><td>Te</td><td class="bn-pron">টে</td><td><span class="de">Tee</span> (টে) — চা</td></tr>
+    <tr><td class="de">U u</td><td>Uu</td><td class="bn-pron">উ</td><td><span class="de">Uhr</span> (উঅর্‌) — ঘড়ি</td></tr>
+    <tr><td class="de">V v</td><td>Vau</td><td class="bn-pron">ফাউ</td><td><span class="de">Vater</span> (ফাটার) — বাবা</td></tr>
+    <tr><td class="de">W w</td><td>We</td><td class="bn-pron">ভে</td><td><span class="de">Wasser</span> — পানি</td></tr>
+    <tr><td class="de">X x</td><td>Ix</td><td class="bn-pron">এক্স</td><td><span class="de">Xylophon</span> — জাইলোফোন</td></tr>
+    <tr><td class="de">Y y</td><td>Ypsilon</td><td class="bn-pron">উপ্সিলন</td><td><span class="de">Yoga</span> — যোগব্যায়াম</td></tr>
+    <tr><td class="de">Z z</td><td>Zett</td><td class="bn-pron">ছেট</td><td><span class="de">Zeit</span> (ছাইট) — সময়</td></tr>
+  </table>
+
+  <h4 class="sub-title">বিশেষ বর্ণসমূহ (Umlauts &amp; Eszett)</h4>
+  <div class="ex"><span class="de">Ä ä</span><span class="pron">উচ্চারণ "এ"</span><span class="meaning"><span class="de">März</span> (মার্চ) — মার্চ মাস</span></div>
+  <div class="ex"><span class="de">Ö ö</span><span class="pron">ঠোঁট গোল করে "ও" ও "এ"-এর মাঝামাঝি</span><span class="meaning"><span class="de">Öl</span> (ওয়েল) — তেল</span></div>
+  <div class="ex"><span class="de">Ü ü</span><span class="pron">"উ" ও "ই"-এর মাঝামাঝি</span><span class="meaning"><span class="de">Tür</span> (টিউর) — দরজা</span></div>
+  <div class="ex"><span class="de">ß</span><span class="pron">"এস" বা Double S-এর মতো</span><span class="meaning"><span class="de">Fußball</span> (ফুসবাল) — ফুটবল</span></div>
+
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH2 ============ -->
+<section class="chapter" id="ch2">
+  <div class="chapter-eyebrow">অধ্যায় ০২</div>
+  <h2>যুক্তবর্ণ ও ধ্বনিবিজ্ঞান</h2>
+
+  <h4 class="sub-title">Ch-এর উচ্চারণ নিয়ম</h4>
+  <div class="ex"><span class="pron">a, o, u-এর পর বসলে "খ" উচ্চারিত হয়</span><span class="meaning"><span class="de">Buch</span> (বুখ) — বই, <span class="de">Machen</span> (মাখেন) — করা</span></div>
+  <div class="ex"><span class="pron">e, i, ä, ö, ü-এর পর বসলে হালকা "শ" বা "হি" উচ্চারিত হয়</span><span class="meaning"><span class="de">Ich</span> (ইশ) — আমি, <span class="de">Mädchen</span> (মেডশেন) — মেয়ে</span></div>
+
+  <h4 class="sub-title">যুক্তস্বর (Diphthongs)</h4>
+  <table>
+    <tr><th>যুক্তস্বর</th><th>উচ্চারণ</th><th>উদাহরণ</th></tr>
+    <tr><td class="de">Au</td><td>আউ</td><td><span class="de">Auto</span> (আউটো) — গাড়ি</td></tr>
+    <tr><td class="de">Ei</td><td>আই</td><td><span class="de">Eis</span> (আইস) — বরফ/আইসক্রিম</td></tr>
+    <tr><td class="de">Eu / Äu</td><td>অয়</td><td><span class="de">Euro</span> (অয়রো), <span class="de">Häuser</span> (হয়যার) — বাড়িগুলো</td></tr>
+    <tr><td class="de">Sch</td><td>শ</td><td><span class="de">Schule</span> (শুলে) — স্কুল</td></tr>
+    <tr><td class="de">Tsch</td><td>চ</td><td><span class="de">Deutsch</span> (ডয়েচ) — জার্মান ভাষা</td></tr>
+    <tr><td class="de">Sp / St (শুরুতে)</td><td>শ্প / স্ট</td><td><span class="de">Sprechen</span> (শ্প্রেখেন), <span class="de">Straße</span> (স্ট্যাসে)</td></tr>
+  </table>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH3 ============ -->
+<section class="chapter" id="ch3">
+  <div class="chapter-eyebrow">অধ্যায় ০৩</div>
+  <h2>সর্বনাম (Personal Pronouns)</h2>
+  <table>
+    <tr><th>জার্মান</th><th>বাংলা উচ্চারণ</th><th>অর্থ</th></tr>
+    <tr><td class="de">Ich</td><td class="bn-pron">ইশ</td><td>আমি</td></tr>
+    <tr><td class="de">Du</td><td class="bn-pron">দু</td><td>তুমি (Informal)</td></tr>
+    <tr><td class="de">Er</td><td class="bn-pron">এর</td><td>সে (পুরুষ)</td></tr>
+    <tr><td class="de">Sie</td><td class="bn-pron">জি</td><td>সে (স্ত্রী)</td></tr>
+    <tr><td class="de">Es</td><td class="bn-pron">এস</td><td>এটা / এটি</td></tr>
+    <tr><td class="de">Wir</td><td class="bn-pron">ভিয়ার</td><td>আমরা</td></tr>
+    <tr><td class="de">Ihr</td><td class="bn-pron">ইয়ার</td><td>তোমরা</td></tr>
+    <tr><td class="de">Sie</td><td class="bn-pron">জি</td><td>আপনি / আপনারা (Formal)</td></tr>
+    <tr><td class="de">sie</td><td class="bn-pron">জি</td><td>তারা (Plural)</td></tr>
+  </table>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH4 ============ -->
+<section class="chapter" id="ch4">
+  <div class="chapter-eyebrow">অধ্যায় ০৪</div>
+  <h2>সংখ্যা (Zahlen)</h2>
+
+  <h4 class="sub-title">১ থেকে ২০ পর্যন্ত</h4>
+  <table>
+    <tr><th>সংখ্যা</th><th>জার্মান</th><th>বাংলা উচ্চারণ</th><th>অর্থ</th></tr>
+    <tr><td>0</td><td class="de">Null</td><td class="bn-pron">নুল</td><td>শূন্য</td></tr>
+    <tr><td>1</td><td class="de">Eins</td><td class="bn-pron">আইন্স</td><td>এক</td></tr>
+    <tr><td>2</td><td class="de">Zwei</td><td class="bn-pron">ছভাই</td><td>দুই</td></tr>
+    <tr><td>3</td><td class="de">Drei</td><td class="bn-pron">ড্রাই</td><td>তিন</td></tr>
+    <tr><td>4</td><td class="de">Vier</td><td class="bn-pron">ফিয়ার</td><td>চার</td></tr>
+    <tr><td>5</td><td class="de">Fünf</td><td class="bn-pron">ফ্যুন্ফ</td><td>পাঁচ</td></tr>
+    <tr><td>6</td><td class="de">Sechs</td><td class="bn-pron">জেক্স</td><td>ছয়</td></tr>
+    <tr><td>7</td><td class="de">Sieben</td><td class="bn-pron">জিবেন</td><td>সাত</td></tr>
+    <tr><td>8</td><td class="de">Acht</td><td class="bn-pron">আখট</td><td>আট</td></tr>
+    <tr><td>9</td><td class="de">Neun</td><td class="bn-pron">নয়ন</td><td>নয়</td></tr>
+    <tr><td>10</td><td class="de">Zehn</td><td class="bn-pron">ছেইন</td><td>দশ</td></tr>
+    <tr><td>11</td><td class="de">Elf</td><td class="bn-pron">এল্ফ</td><td>এগারো</td></tr>
+    <tr><td>12</td><td class="de">Zwölf</td><td class="bn-pron">ছভ্যোল্ফ</td><td>বারো</td></tr>
+    <tr><td>13</td><td class="de">Dreizehn</td><td class="bn-pron">ড্রাইছেইন</td><td>তেরো</td></tr>
+    <tr><td>14</td><td class="de">Vierzehn</td><td class="bn-pron">ফিয়ারছেইন</td><td>চৌদ্দ</td></tr>
+    <tr><td>15</td><td class="de">Fünfzehn</td><td class="bn-pron">ফ্যুন্ফছেইন</td><td>পনেরো</td></tr>
+    <tr><td>16</td><td class="de">Sechzehn</td><td class="bn-pron">জেখছেইন</td><td>ষোলো</td></tr>
+    <tr><td>17</td><td class="de">Siebzehn</td><td class="bn-pron">জীবছেইন</td><td>সতেরো</td></tr>
+    <tr><td>18</td><td class="de">Achtzehn</td><td class="bn-pron">আখটছেইন</td><td>আঠারো</td></tr>
+    <tr><td>19</td><td class="de">Neunzehn</td><td class="bn-pron">নয়নছেইন</td><td>উনিশ</td></tr>
+    <tr><td>20</td><td class="de">Zwanzig</td><td class="bn-pron">ছভানছিগ</td><td>বিশ</td></tr>
+  </table>
+
+  <h4 class="sub-title">২১ থেকে ১০০ (গঠন: একক + und + দশক)</h4>
+  <table>
+    <tr><th>সংখ্যা</th><th>জার্মান</th><th>বাংলা উচ্চারণ</th><th>গঠন</th></tr>
+    <tr><td>21</td><td class="de">Einundzwanzig</td><td class="bn-pron">আইন্-উন্ড-ছভানছিগ</td><td>১ + und + ২০</td></tr>
+    <tr><td>22</td><td class="de">Zweiundzwanzig</td><td class="bn-pron">ছভাই-উন্ড-ছভানছিগ</td><td>২ + und + ২০</td></tr>
+    <tr><td>30</td><td class="de">Dreißig</td><td class="bn-pron">ড্রাইসিগ</td><td>৩০</td></tr>
+    <tr><td>35</td><td class="de">Fünfunddreißig</td><td class="bn-pron">ফ্যুন্ফ-উন্ড-ড্রাইসিগ</td><td>৫ + und + ৩০</td></tr>
+    <tr><td>40</td><td class="de">Vierzig</td><td class="bn-pron">ফিয়ারছিগ</td><td>৪০</td></tr>
+    <tr><td>50</td><td class="de">Fünfzig</td><td class="bn-pron">ফ্যুন্ফছিগ</td><td>৫০</td></tr>
+    <tr><td>60</td><td class="de">Sechzig</td><td class="bn-pron">জেখছিগ</td><td>৬০</td></tr>
+    <tr><td>70</td><td class="de">Siebzig</td><td class="bn-pron">জীবছিগ</td><td>৭০</td></tr>
+    <tr><td>80</td><td class="de">Achtzig</td><td class="bn-pron">আখটছিগ</td><td>৮০</td></tr>
+    <tr><td>90</td><td class="de">Neunzig</td><td class="bn-pron">নয়নছিগ</td><td>৯০</td></tr>
+    <tr><td>100</td><td class="de">Hundert / Einhundert</td><td class="bn-pron">হুনডার্ট / আইন্‌হুনডার্ট</td><td>১০০</td></tr>
+    <tr><td>1000</td><td class="de">Tausend / Eintausend</td><td class="bn-pron">টাউসেন্ড / আইন্‌টাউসেন্ড</td><td>১০০০</td></tr>
+  </table>
+  <div class="note">বাকি দশকগুলোর (৪১-৪৯, ৫১-৫৯ ইত্যাদি) গঠন ঠিক ২১-২৯ এর প্যাটার্ন অনুসরণ করে — একক সংখ্যা + und + দশক।</div>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH5 ============ -->
+<section class="chapter" id="ch5">
+  <div class="chapter-eyebrow">অধ্যায় ০৫</div>
+  <h2>অভিবাদন ও দৈনন্দিন বাক্য</h2>
+  <table>
+    <tr><th>জার্মান</th><th>বাংলা উচ্চারণ</th><th>অর্থ</th></tr>
+    <tr><td class="de">Guten Morgen</td><td class="bn-pron">গুটেন মর্গেন</td><td>শুভ সকাল</td></tr>
+    <tr><td class="de">Guten Tag</td><td class="bn-pron">গুটেন টাগ</td><td>শুভ দিন / হ্যালো</td></tr>
+    <tr><td class="de">Guten Abend</td><td class="bn-pron">গুটেন আবেন্ড</td><td>শুভ সন্ধ্যা</td></tr>
+    <tr><td class="de">Gute Nacht</td><td class="bn-pron">গুটে নাখ্‌ট</td><td>শুভ রাত্রি</td></tr>
+    <tr><td class="de">Hallo</td><td class="bn-pron">হালো</td><td>হ্যালো / হাই</td></tr>
+    <tr><td class="de">Tschüss</td><td class="bn-pron">ছুস</td><td>বিদায় (Informal)</td></tr>
+    <tr><td class="de">Auf Wiedersehen</td><td class="bn-pron">আউফ ভিডারজেহেন</td><td>আবার দেখা হবে (Formal)</td></tr>
+    <tr><td class="de">Bitte</td><td class="bn-pron">বিটে</td><td>দয়া করে / স্বাগতম</td></tr>
+    <tr><td class="de">Danke</td><td class="bn-pron">ডাঙ্কে</td><td>ধন্যবাদ</td></tr>
+    <tr><td class="de">Vielen Dank</td><td class="bn-pron">ফিলেন ডাঙ্ক</td><td>অনেক ধন্যবাদ</td></tr>
+    <tr><td class="de">Ja / Nein</td><td class="bn-pron">ইয়া / নাইন</td><td>হ্যাঁ / না</td></tr>
+    <tr><td class="de">Entschuldigung</td><td class="bn-pron">এন্টশুলডিগুং</td><td>মাফ করবেন</td></tr>
+  </table>
+  <div class="note">সময়ভেদে অভিবাদন: সকাল ৫টা–১১টা → <span class="de">Guten Morgen</span>; বেলা ১১টা–সন্ধ্যা ৬টা → <span class="de">Guten Tag</span>; সন্ধ্যা ৬টা–রাত ১০টা → <span class="de">Guten Abend</span>।</div>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH6 ============ -->
+<section class="chapter" id="ch6">
+  <div class="chapter-eyebrow">অধ্যায় ০৬</div>
+  <h2>সপ্তাহের দিন ও মাসের নাম</h2>
+
+  <h4 class="sub-title">সপ্তাহের দিন (Die Wochentage)</h4>
+  <table>
+    <tr><th>জার্মান</th><th>বাংলা উচ্চারণ</th><th>অর্থ</th></tr>
+    <tr><td class="de">Montag</td><td class="bn-pron">মোনটাগ</td><td>সোমবার</td></tr>
+    <tr><td class="de">Dienstag</td><td class="bn-pron">ডিন্সটাগ</td><td>মঙ্গলবার</td></tr>
+    <tr><td class="de">Mittwoch</td><td class="bn-pron">মিটভখ</td><td>বুধবার</td></tr>
+    <tr><td class="de">Donnerstag</td><td class="bn-pron">ডোনার্সটাগ</td><td>বৃহস্পতিবার</td></tr>
+    <tr><td class="de">Freitag</td><td class="bn-pron">ফ্রাইটাগ</td><td>শুক্রবার</td></tr>
+    <tr><td class="de">Samstag (Sonnabend)</td><td class="bn-pron">জামসটাগ</td><td>শনিবার</td></tr>
+    <tr><td class="de">Sonntag</td><td class="bn-pron">জোনটাগ</td><td>রবিবার</td></tr>
+  </table>
+
+  <h4 class="sub-title">বছরের ১২ মাস (Die Monate)</h4>
+  <table>
+    <tr><th>জার্মান</th><th>বাংলা উচ্চারণ</th><th>অর্থ</th></tr>
+    <tr><td class="de">Januar</td><td class="bn-pron">ইয়ানুয়ার</td><td>জানুয়ারি</td></tr>
+    <tr><td class="de">Februar</td><td class="bn-pron">ফেব্রুয়ার</td><td>ফেব্রুয়ারি</td></tr>
+    <tr><td class="de">März</td><td class="bn-pron">মেয়ার্ৎস</td><td>মার্চ</td></tr>
+    <tr><td class="de">April</td><td class="bn-pron">আপ্রিল</td><td>এপ্রিল</td></tr>
+    <tr><td class="de">Mai</td><td class="bn-pron">মাই</td><td>মে</td></tr>
+    <tr><td class="de">Juni</td><td class="bn-pron">ইউনি</td><td>জুন</td></tr>
+    <tr><td class="de">Juli</td><td class="bn-pron">ইউলি</td><td>জুলাই</td></tr>
+    <tr><td class="de">August</td><td class="bn-pron">আউগুস্ট</td><td>আগস্ট</td></tr>
+    <tr><td class="de">September</td><td class="bn-pron">সেপ্টেম্বার</td><td>সেপ্টেম্বর</td></tr>
+    <tr><td class="de">Oktober</td><td class="bn-pron">অক্টোবার</td><td>অক্টোবর</td></tr>
+    <tr><td class="de">November</td><td class="bn-pron">নোভেম্বার</td><td>নভেম্বর</td></tr>
+    <tr><td class="de">Dezember</td><td class="bn-pron">দেৎসেম্বার</td><td>ডিসেম্বর</td></tr>
+  </table>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH7 ============ -->
+<section class="chapter" id="ch7">
+  <div class="chapter-eyebrow">অধ্যায় ০৭</div>
+  <h2>সময় বলা (Uhrzeit)</h2>
+  <table>
+    <tr><th>জার্মান</th><th>বাংলা উচ্চারণ</th><th>ব্যবহার ও অর্থ</th></tr>
+    <tr><td class="de">Uhr</td><td class="bn-pron">উঅর্‌</td><td>ঘণ্টা / ও'ক্লক — <span class="de">Es ist 3 Uhr</span> = এখন ৩টা বাজে</td></tr>
+    <tr><td class="de">Vor</td><td class="bn-pron">ফোঅর্‌</td><td>বাকি/পূর্বে — <span class="de">Zehn vor drei</span> = ৩টা বাজতে ১০ মিনিট বাকি</td></tr>
+    <tr><td class="de">Nach</td><td class="bn-pron">নাখ্‌</td><td>পার হয়ে/পরে — <span class="de">Zehn nach drei</span> = ৩টা বেজে ১০ মিনিট</td></tr>
+    <tr><td class="de">Halb</td><td class="bn-pron">হাল্প</td><td>সাড়ে — <span class="de">Halb vier</span> = ৩:৩০ (৪টার অর্ধেক অর্থে)</td></tr>
+    <tr><td class="de">Viertel</td><td class="bn-pron">ফিয়ারটেল</td><td>১৫ মিনিট — <span class="de">Viertel nach drei</span> = ৩:১৫</td></tr>
+  </table>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH8 ============ -->
+<section class="chapter" id="ch8">
+  <div class="chapter-eyebrow">অধ্যায় ০৮</div>
+  <h2>আর্টিকেল ও মৌলিক ক্রিয়া</h2>
+
+  <h4 class="sub-title">জেন্ডার অনুযায়ী আর্টিকেল (Nomen &amp; Artikel)</h4>
+  <div class="ex"><span class="de">Der</span> (দের) — পুংলিঙ্গ <span class="meaning"><span class="de">der Mann</span> — পুরুষ</span></div>
+  <div class="ex"><span class="de">Die</span> (ডি) — স্ত্রীলিঙ্গ <span class="meaning"><span class="de">die Frau</span> — নারী</span></div>
+  <div class="ex"><span class="de">Das</span> (দাস) — ক্লীবলিঙ্গ <span class="meaning"><span class="de">das Kind</span> — শিশু</span></div>
+  <div class="ex"><span class="de">Die</span> (ডি) — বহুবচন <span class="meaning"><span class="de">die Kinder</span> — শিশুরা</span></div>
+
+  <h4 class="sub-title">Sein (হওয়া / To be) ও Heißen (নাম হওয়া)</h4>
+  <table>
+    <tr><th>Pronoun</th><th class="de">sein</th><th class="de">heißen</th></tr>
+    <tr><td class="de">ich</td><td>bin</td><td>heiße</td></tr>
+    <tr><td class="de">du</td><td>bist</td><td>heißt</td></tr>
+    <tr><td class="de">er/sie/es</td><td>ist</td><td>heißt</td></tr>
+    <tr><td class="de">wir</td><td>sind</td><td>heißen</td></tr>
+    <tr><td class="de">ihr</td><td>seid</td><td>heißt</td></tr>
+    <tr><td class="de">sie/Sie</td><td>sind</td><td>heißen</td></tr>
+  </table>
+
+  <h4 class="sub-title">Haben (থাকা/আছে) — নমুনা রূপ</h4>
+  <div class="ex"><span class="de">Ich habe</span> <span class="pron">ইশ হাবে</span><span class="meaning">আমার আছে</span></div>
+  <div class="ex"><span class="de">Du hast</span> <span class="pron">দু হাস্ট</span><span class="meaning">তোমার আছে</span></div>
+  <div class="ex"><span class="de">Er/Sie/Es hat</span> <span class="pron">এর/জি/এস হাত</span><span class="meaning">তার আছে</span></div>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH9 ============ -->
+<section class="chapter" id="ch9">
+  <div class="chapter-eyebrow">অধ্যায় ০৯</div>
+  <h2>ক্রিয়ার রূপান্তর — সম্পূর্ণ তালিকা</h2>
+  <p class="lead">নিয়ম অনুযায়ী পরিবর্তনের ধরন: <span class="de">ich</span> = -e, <span class="de">du</span> = -st, <span class="de">er/sie/es</span> = -t, <span class="de">ihr</span> = -t, <span class="de">wir/Sie/sie</span> = -en।</p>
+
+  <span class="tag">নিয়মিত ক্রিয়া (Regular Verbs)</span>
+  <table>
+    <tr><th>ক্রিয়া (অর্থ)</th><th class="de">ich</th><th class="de">du</th><th class="de">er/sie/es</th><th class="de">ihr</th><th class="de">wir/Sie/sie</th></tr>
+    <tr><td class="de">arbeiten <span class="bn-pron">(কাজ করা)</span></td><td>arbeite</td><td>arbeitest</td><td>arbeitet</td><td>arbeitet</td><td>arbeiten</td></tr>
+    <tr><td class="de">bestellen <span class="bn-pron">(অর্ডার করা)</span></td><td>bestelle</td><td>bestellst</td><td>bestellt</td><td>bestellt</td><td>bestellen</td></tr>
+    <tr><td class="de">besuchen <span class="bn-pron">(পরিদর্শন করা)</span></td><td>besuche</td><td>besuchst</td><td>besucht</td><td>besucht</td><td>besuchen</td></tr>
+    <tr><td class="de">bezahlen <span class="bn-pron">(পরিশোধ করা)</span></td><td>bezahle</td><td>bezahlst</td><td>bezahlt</td><td>bezahlt</td><td>bezahlen</td></tr>
+    <tr><td class="de">bilden <span class="bn-pron">(গঠন করা)</span></td><td>bilde</td><td>bildest</td><td>bildet</td><td>bildet</td><td>bilden</td></tr>
+    <tr><td class="de">brauchen <span class="bn-pron">(প্রয়োজন)</span></td><td>brauche</td><td>brauchst</td><td>braucht</td><td>braucht</td><td>brauchen</td></tr>
+    <tr><td class="de">erklären <span class="bn-pron">(ব্যাখ্যা করা)</span></td><td>erkläre</td><td>erklärst</td><td>erklärt</td><td>erklärt</td><td>erklären</td></tr>
+    <tr><td class="de">erreichen <span class="bn-pron">(পৌঁছানো)</span></td><td>erreiche</td><td>erreichst</td><td>erreicht</td><td>erreicht</td><td>erreichen</td></tr>
+    <tr><td class="de">erwarten <span class="bn-pron">(আশা করা)</span></td><td>erwarte</td><td>erwartest</td><td>erwartet</td><td>erwartet</td><td>erwarten</td></tr>
+    <tr><td class="de">fragen <span class="bn-pron">(প্রশ্ন করা)</span></td><td>frage</td><td>fragst</td><td>fragt</td><td>fragt</td><td>fragen</td></tr>
+    <tr><td class="de">fühlen <span class="bn-pron">(অনুভব করা)</span></td><td>fühle</td><td>fühlst</td><td>fühlt</td><td>fühlt</td><td>fühlen</td></tr>
+    <tr><td class="de">führen <span class="bn-pron">(নেতৃত্ব দেওয়া)</span></td><td>führe</td><td>führst</td><td>führt</td><td>führt</td><td>führen</td></tr>
+    <tr><td class="de">hören <span class="bn-pron">(শোনা)</span></td><td>höre</td><td>hörst</td><td>hört</td><td>hört</td><td>hören</td></tr>
+    <tr><td class="de">interessieren <span class="bn-pron">(আগ্রহ থাকা)</span></td><td>interessiere</td><td>interessierst</td><td>interessiert</td><td>interessiert</td><td>interessieren</td></tr>
+    <tr><td class="de">kaufen <span class="bn-pron">(ক্রয় করা)</span></td><td>kaufe</td><td>kaufst</td><td>kauft</td><td>kauft</td><td>kaufen</td></tr>
+    <tr><td class="de">lernen <span class="bn-pron">(শেখা)</span></td><td>lerne</td><td>lernst</td><td>lernt</td><td>lernt</td><td>lernen</td></tr>
+    <tr><td class="de">lieben <span class="bn-pron">(ভালোবাসা)</span></td><td>liebe</td><td>liebst</td><td>liebt</td><td>liebt</td><td>lieben</td></tr>
+    <tr><td class="de">machen <span class="bn-pron">(করা)</span></td><td>mache</td><td>machst</td><td>macht</td><td>macht</td><td>machen</td></tr>
+    <tr><td class="de">öffnen <span class="bn-pron">(খোলা)</span></td><td>öffne</td><td>öffnest</td><td>öffnet</td><td>öffnet</td><td>öffnen</td></tr>
+    <tr><td class="de">probieren <span class="bn-pron">(চেষ্টা করা)</span></td><td>probiere</td><td>probierst</td><td>probiert</td><td>probiert</td><td>probieren</td></tr>
+    <tr><td class="de">reden <span class="bn-pron">(কথা বলা)</span></td><td>rede</td><td>redest</td><td>redet</td><td>redet</td><td>reden</td></tr>
+    <tr><td class="de">reisen <span class="bn-pron">(ভ্রমণ করা)</span></td><td>reise</td><td>reist</td><td>reist</td><td>reist</td><td>reisen</td></tr>
+    <tr><td class="de">sagen <span class="bn-pron">(বলা)</span></td><td>sage</td><td>sagst</td><td>sagt</td><td>sagt</td><td>sagen</td></tr>
+    <tr><td class="de">schreiben <span class="bn-pron">(লেখা)</span></td><td>schreibe</td><td>schreibst</td><td>schreibt</td><td>schreibt</td><td>schreiben</td></tr>
+    <tr><td class="de">schwimmen <span class="bn-pron">(সাঁতার কাটা)</span></td><td>schwimme</td><td>schwimmst</td><td>schwimmt</td><td>schwimmt</td><td>schwimmen</td></tr>
+    <tr><td class="de">senden <span class="bn-pron">(পাঠানো)</span></td><td>sende</td><td>sendest</td><td>sendet</td><td>sendet</td><td>senden</td></tr>
+    <tr><td class="de">singen <span class="bn-pron">(গান গাওয়া)</span></td><td>singe</td><td>singst</td><td>singt</td><td>singt</td><td>singen</td></tr>
+    <tr><td class="de">spielen <span class="bn-pron">(খেলা করা)</span></td><td>spiele</td><td>spielst</td><td>spielt</td><td>spielt</td><td>spielen</td></tr>
+    <tr><td class="de">studieren <span class="bn-pron">(অধ্যয়ন করা)</span></td><td>studiere</td><td>studierst</td><td>studiert</td><td>studiert</td><td>studieren</td></tr>
+    <tr><td class="de">suchen <span class="bn-pron">(খোঁজা)</span></td><td>suche</td><td>suchst</td><td>sucht</td><td>sucht</td><td>suchen</td></tr>
+    <tr><td class="de">trinken <span class="bn-pron">(পান করা)</span></td><td>trinke</td><td>trinkst</td><td>trinkt</td><td>trinkt</td><td>trinken</td></tr>
+    <tr><td class="de">warten <span class="bn-pron">(অপেক্ষা করা)</span></td><td>warte</td><td>wartest</td><td>wartet</td><td>wartet</td><td>warten</td></tr>
+    <tr><td class="de">wohnen <span class="bn-pron">(বসবাস করা)</span></td><td>wohne</td><td>wohnst</td><td>wohnt</td><td>wohnt</td><td>wohnen</td></tr>
+    <tr><td class="de">kochen <span class="bn-pron">(রান্না করা)</span></td><td>koche</td><td>kochst</td><td>kocht</td><td>kocht</td><td>kochen</td></tr>
+    <tr><td class="de">lachen <span class="bn-pron">(হাসা)</span></td><td>lache</td><td>lachst</td><td>lacht</td><td>lacht</td><td>lachen</td></tr>
+    <tr><td class="de">glauben <span class="bn-pron">(বিশ্বাস করা)</span></td><td>glaube</td><td>glaubst</td><td>glaubt</td><td>glaubt</td><td>glauben</td></tr>
+  </table>
+
+  <span class="tag alt">পৃথকযোগ্য নিয়মিত ক্রিয়া (Separable)</span>
+  <table>
+    <tr><th>ক্রিয়া (অর্থ)</th><th class="de">ich</th><th class="de">du</th><th class="de">er/sie/es</th><th class="de">ihr</th><th class="de">wir/Sie/sie</th></tr>
+    <tr><td class="de">anprobieren <span class="bn-pron">(ট্রায়াল দেওয়া)</span></td><td>probiere an</td><td>probierst an</td><td>probiert an</td><td>probiert an</td><td>probieren an</td></tr>
+    <tr><td class="de">ausprobieren <span class="bn-pron">(টেস্ট করা)</span></td><td>probiere aus</td><td>probierst aus</td><td>probiert aus</td><td>probiert aus</td><td>probieren aus</td></tr>
+    <tr><td class="de">anfangen <span class="bn-pron">(শুরু করা)</span></td><td>fange an</td><td>fängst an</td><td>fängt an</td><td>fangt an</td><td>fangen an</td></tr>
+    <tr><td class="de">anrufen <span class="bn-pron">(ফোন করা)</span></td><td>rufe an</td><td>rufst an</td><td>ruft an</td><td>ruft an</td><td>rufen an</td></tr>
+  </table>
+
+  <span class="tag">অনিয়মিত ক্রিয়া (Irregular Verbs)</span>
+  <table>
+    <tr><th>ক্রিয়া (অর্থ)</th><th class="de">ich</th><th class="de">du</th><th class="de">er/sie/es</th><th class="de">ihr</th><th class="de">wir/Sie/sie</th></tr>
+    <tr><td class="de">antworten <span class="bn-pron">(উত্তর দেওয়া)</span></td><td>antworte</td><td>antwortest</td><td>antwortet</td><td>antwortet</td><td>antworten</td></tr>
+    <tr><td class="de">bringen <span class="bn-pron">(নিয়ে আসা)</span></td><td>bringe</td><td>bringst</td><td>bringt</td><td>bringt</td><td>bringen</td></tr>
+    <tr><td class="de">dürfen <span class="bn-pron">(অনুমতি — Modal)</span></td><td>darf</td><td>darfst</td><td>darf</td><td>dürft</td><td>dürfen</td></tr>
+    <tr><td class="de">essen <span class="bn-pron">(খাওয়া)</span></td><td>esse</td><td>isst</td><td>isst</td><td>esst</td><td>essen</td></tr>
+    <tr><td class="de">fahren <span class="bn-pron">(গাড়িতে যাওয়া)</span></td><td>fahre</td><td>fährst</td><td>fährt</td><td>fahrt</td><td>fahren</td></tr>
+    <tr><td class="de">feiern <span class="bn-pron">(উদযাপন করা)</span></td><td>feiere</td><td>feierst</td><td>feiert</td><td>feiert</td><td>feiern</td></tr>
+    <tr><td class="de">finden <span class="bn-pron">(খুঁজে পাওয়া)</span></td><td>finde</td><td>findest</td><td>findet</td><td>findet</td><td>finden</td></tr>
+    <tr><td class="de">fliegen <span class="bn-pron">(বিমানে ওড়া)</span></td><td>fliege</td><td>fliegst</td><td>fliegt</td><td>fliegt</td><td>fliegen</td></tr>
+    <tr><td class="de">folgen <span class="bn-pron">(অনুসরণ করা)</span></td><td>folge</td><td>folgst</td><td>folgt</td><td>folgt</td><td>folgen</td></tr>
+    <tr><td class="de">geben <span class="bn-pron">(দেওয়া)</span></td><td>gebe</td><td>gibst</td><td>gibt</td><td>gebt</td><td>geben</td></tr>
+    <tr><td class="de">gehen <span class="bn-pron">(যাওয়া)</span></td><td>gehe</td><td>gehst</td><td>geht</td><td>geht</td><td>gehen</td></tr>
+    <tr><td class="de">gewinnen <span class="bn-pron">(জয়ী হওয়া)</span></td><td>gewinne</td><td>gewinnst</td><td>gewinnt</td><td>gewinnt</td><td>gewinnen</td></tr>
+    <tr><td class="de">haben <span class="bn-pron">(থাকা/আছে)</span></td><td>habe</td><td>hast</td><td>hat</td><td>habt</td><td>haben</td></tr>
+    <tr><td class="de">heißen <span class="bn-pron">(নাম হওয়া)</span></td><td>heiße</td><td>heißt</td><td>heißt</td><td>heißt</td><td>heißen</td></tr>
+    <tr><td class="de">helfen <span class="bn-pron">(সাহায্য করা)</span></td><td>helfe</td><td>hilfst</td><td>hilft</td><td>helft</td><td>helfen</td></tr>
+    <tr><td class="de">kennen <span class="bn-pron">(জানা/চেনা)</span></td><td>kenne</td><td>kennst</td><td>kennt</td><td>kennt</td><td>kennen</td></tr>
+    <tr><td class="de">können <span class="bn-pron">(পারা — Modal)</span></td><td>kann</td><td>kannst</td><td>kann</td><td>könnt</td><td>können</td></tr>
+    <tr><td class="de">laufen <span class="bn-pron">(দৌড়ানো)</span></td><td>laufe</td><td>läufst</td><td>läuft</td><td>lauft</td><td>laufen</td></tr>
+    <tr><td class="de">lesen <span class="bn-pron">(পড়া)</span></td><td>lese</td><td>liest</td><td>liest</td><td>lest</td><td>lesen</td></tr>
+    <tr><td class="de">mögen <span class="bn-pron">(পছন্দ করা — Modal)</span></td><td>mag</td><td>magst</td><td>mag</td><td>mögt</td><td>mögen</td></tr>
+    <tr><td class="de">müssen <span class="bn-pron">(আবশ্যক — Modal)</span></td><td>muss</td><td>musst</td><td>muss</td><td>müsst</td><td>müssen</td></tr>
+    <tr><td class="de">nehmen <span class="bn-pron">(গ্রহণ করা)</span></td><td>nehme</td><td>nimmst</td><td>nimmt</td><td>nehmt</td><td>nehmen</td></tr>
+    <tr><td class="de">rufen <span class="bn-pron">(ডাকা)</span></td><td>rufe</td><td>rufst</td><td>ruft</td><td>ruft</td><td>rufen</td></tr>
+    <tr><td class="de">schlafen <span class="bn-pron">(ঘুমানো)</span></td><td>schlafe</td><td>schläfst</td><td>schläft</td><td>schlaft</td><td>schlafen</td></tr>
+    <tr><td class="de">sehen <span class="bn-pron">(দেখা)</span></td><td>sehe</td><td>siehst</td><td>sieht</td><td>seht</td><td>sehen</td></tr>
+    <tr><td class="de">sollen <span class="bn-pron">(উচিত — Modal)</span></td><td>soll</td><td>sollst</td><td>soll</td><td>sollt</td><td>sollen</td></tr>
+    <tr><td class="de">tragen <span class="bn-pron">(বহন/পরিধান করা)</span></td><td>trage</td><td>trägst</td><td>trägt</td><td>tragt</td><td>tragen</td></tr>
+    <tr><td class="de">treffen <span class="bn-pron">(দেখা করা)</span></td><td>treffe</td><td>triffst</td><td>trifft</td><td>trefft</td><td>treffen</td></tr>
+    <tr><td class="de">vergessen <span class="bn-pron">(ভুলে যাওয়া)</span></td><td>vergesse</td><td>vergisst</td><td>vergisst</td><td>vergesst</td><td>vergessen</td></tr>
+    <tr><td class="de">verlieren <span class="bn-pron">(হারানো)</span></td><td>verliere</td><td>verlierst</td><td>verliert</td><td>verliert</td><td>verlieren</td></tr>
+    <tr><td class="de">verstehen <span class="bn-pron">(বোঝা)</span></td><td>verstehe</td><td>verstehst</td><td>versteht</td><td>versteht</td><td>verstehen</td></tr>
+    <tr><td class="de">sprechen <span class="bn-pron">(কথা বলা)</span></td><td>spreche</td><td>sprichst</td><td>spricht</td><td>sprecht</td><td>sprechen</td></tr>
+    <tr><td class="de">wissen <span class="bn-pron">(জানা)</span></td><td>weiß</td><td>weißt</td><td>weiß</td><td>wisst</td><td>wissen</td></tr>
+    <tr><td class="de">wollen <span class="bn-pron">(চাওয়া — Modal)</span></td><td>will</td><td>willst</td><td>will</td><td>wollt</td><td>wollen</td></tr>
+  </table>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH10 ============ -->
+<section class="chapter" id="ch10">
+  <div class="chapter-eyebrow">অধ্যায় ১০</div>
+  <h2>ভোকাবুলারি — বর্ণ অনুযায়ী</h2>
+  <p class="lead">DW ফোনেটিক চার্ট অবলম্বনে — প্রতিটি বর্ণের জন্য একটি শব্দ।</p>
+  <table>
+    <tr><th>বর্ণ</th><th>জার্মান শব্দ</th><th>বাংলা উচ্চারণ</th><th>অর্থ</th></tr>
+    <tr><td>A, a</td><td class="de">Ananas</td><td class="bn-pron">আনানাস</td><td>আনারস</td></tr>
+    <tr><td>Ä, ä</td><td class="de">Äpfel</td><td class="bn-pron">এপফেল</td><td>আপেলগুলো</td></tr>
+    <tr><td>Au, au</td><td class="de">Auge</td><td class="bn-pron">আউগে</td><td>চোখ</td></tr>
+    <tr><td>B, b</td><td class="de">Banane</td><td class="bn-pron">বানানে</td><td>কলা</td></tr>
+    <tr><td>C, c</td><td class="de">Computer</td><td class="bn-pron">কম্পিউটার</td><td>কম্পিউটার</td></tr>
+    <tr><td>Ch, ch</td><td class="de">Milch</td><td class="bn-pron">মিল্খ</td><td>দুধ</td></tr>
+    <tr><td>ck</td><td class="de">Rucksack</td><td class="bn-pron">রুকজাক</td><td>ব্যাকপ্যাক</td></tr>
+    <tr><td>D, d</td><td class="de">Dose</td><td class="bn-pron">ডোজে</td><td>ক্যান</td></tr>
+    <tr><td>E, e</td><td class="de">Esel</td><td class="bn-pron">এজেল</td><td>গাধা</td></tr>
+    <tr><td>Ei, ei</td><td class="de">Eis</td><td class="bn-pron">আইস</td><td>আইসক্রিম/বরফ</td></tr>
+    <tr><td>Eu, eu</td><td class="de">Euro</td><td class="bn-pron">অয়রো</td><td>ইউরো</td></tr>
+    <tr><td>F, f</td><td class="de">Fisch</td><td class="bn-pron">ফিশ</td><td>মাছ</td></tr>
+    <tr><td>G, g</td><td class="de">Geld</td><td class="bn-pron">গেল্ট</td><td>টাকা</td></tr>
+    <tr><td>H, h</td><td class="de">Hose</td><td class="bn-pron">হোজে</td><td>প্যান্ট</td></tr>
+    <tr><td>I, i</td><td class="de">Information</td><td class="bn-pron">ইনফরমাৎসিওন</td><td>তথ্য</td></tr>
+    <tr><td>ie</td><td class="de">Knie</td><td class="bn-pron">ক্নি</td><td>হাঁটু</td></tr>
+    <tr><td>J, j</td><td class="de">Jacke</td><td class="bn-pron">ইয়াকে</td><td>জ্যাকেট</td></tr>
+    <tr><td>K, k</td><td class="de">Koffer</td><td class="bn-pron">কফার</td><td>সুটকেস</td></tr>
+    <tr><td>L, l</td><td class="de">Lampe</td><td class="bn-pron">লাম্পে</td><td>বাতি</td></tr>
+    <tr><td>M, m</td><td class="de">Messer</td><td class="bn-pron">মেসার</td><td>ছুরি</td></tr>
+    <tr><td>N, n</td><td class="de">Nase</td><td class="bn-pron">নাজে</td><td>নাক</td></tr>
+    <tr><td>O, o</td><td class="de">Olive</td><td class="bn-pron">অলিভে</td><td>জলপাই</td></tr>
+    <tr><td>Ö, ö</td><td class="de">Öl</td><td class="bn-pron">ওল</td><td>তেল</td></tr>
+    <tr><td>P, p</td><td class="de">Pizza</td><td class="bn-pron">পিৎসা</td><td>পিৎজা</td></tr>
+    <tr><td>Pf, pf</td><td class="de">Pfanne</td><td class="bn-pron">ফানে</td><td>ফ্রাইপ্যান</td></tr>
+    <tr><td>Qu, qu</td><td class="de">Quadrat</td><td class="bn-pron">কুয়াদ্রাট</td><td>বর্গক্ষেত্র</td></tr>
+    <tr><td>R, r</td><td class="de">Rose</td><td class="bn-pron">রোজে</td><td>গোলাপ</td></tr>
+    <tr><td>S, s</td><td class="de">Salat</td><td class="bn-pron">জালাট</td><td>সালাদ</td></tr>
+    <tr><td>Sch, sch</td><td class="de">Schokolade</td><td class="bn-pron">শোকোলাডে</td><td>চকোলেট</td></tr>
+    <tr><td>Sp, sp</td><td class="de">Spiegel</td><td class="bn-pron">শ্পিগেল</td><td>আয়না</td></tr>
+    <tr><td>ß, ß</td><td class="de">Fuß</td><td class="bn-pron">ফুস</td><td>পা</td></tr>
+    <tr><td>St, st</td><td class="de">Stuhl</td><td class="bn-pron">শ্টুল</td><td>চেয়ার</td></tr>
+    <tr><td>T, t</td><td class="de">Tomate</td><td class="bn-pron">টোমাটে</td><td>টমেটো</td></tr>
+    <tr><td>U, u</td><td class="de">Uhr</td><td class="bn-pron">উর</td><td>ঘড়ি</td></tr>
+    <tr><td>Ü, ü</td><td class="de">Überraschung</td><td class="bn-pron">উবাররাশুং</td><td>বিস্ময়</td></tr>
+    <tr><td>V, v</td><td class="de">Vogel</td><td class="bn-pron">ফোঘেল</td><td>পাখি</td></tr>
+    <tr><td>W, w</td><td class="de">Wolle</td><td class="bn-pron">ভোলে</td><td>উল</td></tr>
+    <tr><td>X, x</td><td class="de">Xylophon</td><td class="bn-pron">ক্সাইলোফোন</td><td>জাইলোফোন</td></tr>
+    <tr><td>Y, y</td><td class="de">Handy</td><td class="bn-pron">হ্যান্ডি</td><td>মোবাইল ফোন</td></tr>
+    <tr><td>Y, y</td><td class="de">Yoga</td><td class="bn-pron">যোগা</td><td>যোগব্যায়াম</td></tr>
+    <tr><td>Z, z</td><td class="de">Zitrone</td><td class="bn-pron">ছিট্রোনে</td><td>লেবু</td></tr>
+  </table>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH11 ============ -->
+<section class="chapter" id="ch11">
+  <div class="chapter-eyebrow">অধ্যায় ১১</div>
+  <h2>পরিচিতি পর্ব (Sich vorstellen)</h2>
+  <h4 class="sub-title">Sein ও Heißen অনুশীলন বাক্য</h4>
+  <div class="ex"><span class="de">Ich heiße Mridul.</span><span class="pron">ইশ হাইসে ম্রিদুল।</span><span class="meaning">আমার নাম মৃদুল।</span></div>
+  <div class="ex"><span class="de">Ich bin aus Bangladesch.</span><span class="pron">ইশ বিন আউস বাংলাদেশ।</span><span class="meaning">আমি বাংলাদেশ থেকে।</span></div>
+  <div class="ex"><span class="de">Wie heißt du?</span><span class="pron">ভি হাইস্ট ডু?</span><span class="meaning">তোমার নাম কী?</span></div>
+  <div class="ex"><span class="de">Woher kommst du?</span><span class="pron">ভোহের কমস্ট ডু?</span><span class="meaning">তুমি কোথা থেকে এসেছ?</span></div>
+  <div class="note">প্রাসঙ্গিক শব্দভান্ডার: <span class="de">Name</span> (নাম), <span class="de">Land</span> (দেশ), <span class="de">Sprache</span> (ভাষা), <span class="de">Alter</span> (বয়স), <span class="de">Beruf</span> (পেশা)।</div>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH12 ============ -->
+<section class="chapter" id="ch12">
+  <div class="chapter-eyebrow">অধ্যায় ১২</div>
+  <h2>Nomen ও Artikel</h2>
+  <p>প্রতিটি Nomen (বিশেষ্য)-এর একটি লিঙ্গ (Genus) থাকে: <span class="de">der</span> (পুংলিঙ্গ), <span class="de">die</span> (স্ত্রীলিঙ্গ), <span class="de">das</span> (নপুংসকলিঙ্গ)। Plural (বহুবচন) গঠনের নিয়ম: -e, -er, -n, -en, -s। অনির্দিষ্ট আর্টিকেল: <span class="de">ein, eine, ein</span>।</p>
+  <div class="ex"><span class="de">der Mann → die Frau → das Kind</span><span class="meaning">পুরুষ → মহিলা → শিশু</span></div>
+  <div class="ex"><span class="de">der Tisch → die Tische</span><span class="meaning">টেবিল → টেবিলগুলো</span></div>
+  <div class="ex"><span class="de">das Buch → die Bücher</span><span class="meaning">বই → বইগুলো</span></div>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH13 ============ -->
+<section class="chapter" id="ch13">
+  <div class="chapter-eyebrow">অধ্যায় ১৩</div>
+  <h2>Nominativ ও Akkusativ</h2>
+  <table>
+    <tr><th>Artikel</th><th>Nominativ</th><th>Akkusativ</th></tr>
+    <tr><td class="de">der</td><td class="de">der</td><td class="de">den</td></tr>
+    <tr><td class="de">die</td><td class="de">die</td><td class="de">die</td></tr>
+    <tr><td class="de">das</td><td class="de">das</td><td class="de">das</td></tr>
+    <tr><td class="de">ein</td><td class="de">ein</td><td class="de">einen</td></tr>
+  </table>
+  <div class="ex"><span class="de">Der Mann kauft den Apfel.</span><span class="pron">দের মান কাউফট ডেন আপফেল।</span><span class="meaning">লোকটি আপেলটি কেনে।</span></div>
+  <div class="ex"><span class="de">Ich sehe die Frau.</span><span class="pron">ইশ জেহে দি ফ্রাউ।</span><span class="meaning">আমি মহিলাটিকে দেখি।</span></div>
+  <div class="note">Akkusativ Pronouns: <span class="de">mich, dich, ihn, sie, es, uns, euch, sie/Sie</span></div>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH14 ============ -->
+<section class="chapter" id="ch14">
+  <div class="chapter-eyebrow">অধ্যায় ১৪</div>
+  <h2>Possessive Articles (মালিকানা নির্দেশক)</h2>
+  <p><span class="de">mein/meine</span> (আমার), <span class="de">dein/deine</span> (তোমার), <span class="de">sein/seine</span> (তার-পুরুষ), <span class="de">ihr/ihre</span> (তার-নারী), <span class="de">unser</span> (আমাদের), <span class="de">euer</span> (তোমাদের), <span class="de">ihr/Ihr</span> (তাদের/আপনার)</p>
+  <div class="ex"><span class="de">Das ist mein Buch.</span><span class="pron">দাস ইস্ট মাইন বুখ।</span><span class="meaning">এটা আমার বই।</span></div>
+  <div class="ex"><span class="de">Wo ist deine Tasche?</span><span class="pron">ভো ইস্ট ডাইনে টাশে?</span><span class="meaning">তোমার ব্যাগ কোথায়?</span></div>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH15 ============ -->
+<section class="chapter" id="ch15">
+  <div class="chapter-eyebrow">অধ্যায় ১৫</div>
+  <h2>Negation (নেতিবাচক বাক্য)</h2>
+  <p><span class="de">nicht</span> ব্যবহার হয় verb, adjective, বা পুরো বাক্য অস্বীকার করতে। <span class="de">kein/keine</span> ব্যবহার হয় Nomen (ein-article সহ বা ছাড়া) অস্বীকার করতে।</p>
+  <div class="ex"><span class="de">Ich verstehe nicht.</span><span class="pron">ইশ ফারশ্টেহে নিশ্‌ট।</span><span class="meaning">আমি বুঝি না।</span></div>
+  <div class="ex"><span class="de">Ich habe kein Geld.</span><span class="pron">ইশ হাবে কাইন গেল্ট।</span><span class="meaning">আমার কাছে টাকা নেই।</span></div>
+  <div class="ex"><span class="de">Das ist nicht mein Auto.</span><span class="pron">দাস ইস্ট নিশ্‌ট মাইন আউটো।</span><span class="meaning">এটা আমার গাড়ি না।</span></div>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH16 ============ -->
+<section class="chapter" id="ch16">
+  <div class="chapter-eyebrow">অধ্যায় ১৬</div>
+  <h2>প্রশ্ন করা (W-Fragen)</h2>
+  <p><span class="de">Wer</span> (কে), <span class="de">Was</span> (কী), <span class="de">Wo</span> (কোথায়), <span class="de">Wann</span> (কখন), <span class="de">Warum</span> (কেন), <span class="de">Wie</span> (কীভাবে), <span class="de">Woher</span> (কোথা থেকে), <span class="de">Wohin</span> (কোথায় যাচ্ছ)। গঠন: W-Wort + Verb + Subjekt...?</p>
+  <div class="ex"><span class="de">Wo wohnst du?</span><span class="pron">ভো ভোনস্ট ডু?</span><span class="meaning">তুমি কোথায় থাকো?</span></div>
+  <div class="ex"><span class="de">Wann beginnt die Arbeit?</span><span class="pron">ভান বেগিনট দি আরবাইট?</span><span class="meaning">কাজ কখন শুরু হয়?</span></div>
+  <h4 class="sub-title">Ja/Nein-Fragen (Verb + Subjekt...?)</h4>
+  <div class="ex"><span class="de">Kommst du heute?</span><span class="pron">কমস্ট ডু হয়টে?</span><span class="meaning">তুমি কি আজ আসবে?</span></div>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH17 ============ -->
+<section class="chapter" id="ch17">
+  <div class="chapter-eyebrow">অধ্যায় ১৭</div>
+  <h2>Präpositionen (সংযোজক শব্দ)</h2>
+  <p><span class="de">in</span> (ভেতরে), <span class="de">an</span> (কাছে/উপরে), <span class="de">auf</span> (উপরে), <span class="de">mit</span> (সাথে), <span class="de">für</span> (জন্য), <span class="de">zu</span> (দিকে), <span class="de">bei</span> (কাছে), <span class="de">aus</span> (থেকে)</p>
+  <div class="ex"><span class="de">Ich wohne in Berlin.</span><span class="pron">ইশ ভোনে ইন বেয়ারলিন।</span><span class="meaning">আমি বার্লিনে থাকি।</span></div>
+  <div class="ex"><span class="de">Das Geschenk ist für dich.</span><span class="pron">দাস গেশেংক ইস্ট ফ্যুর দিশ।</span><span class="meaning">উপহারটা তোমার জন্য।</span></div>
+  <div class="ex"><span class="de">Ich fahre mit dem Bus.</span><span class="pron">ইশ ফারে মিট দেম বুস।</span><span class="meaning">আমি বাসে করে যাই।</span></div>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH18 ============ -->
+<section class="chapter" id="ch18">
+  <div class="chapter-eyebrow">অধ্যায় ১৮</div>
+  <h2>Imperativ (আদেশসূচক বাক্য)</h2>
+  <div class="ex"><span class="de">Komm! / Geh! / Mach das!</span><span class="pron">কম! / গে! / মাখ দাস!</span><span class="meaning">du-form (অনানুষ্ঠানিক)</span></div>
+  <div class="ex"><span class="de">Kommen Sie! / Gehen Sie!</span><span class="pron">কমেন জি! / গেহেন জি!</span><span class="meaning">Sie-form (আনুষ্ঠানিক)</span></div>
+  <div class="ex"><span class="de">Kommt! / Geht!</span><span class="pron">কমট! / গেট!</span><span class="meaning">ihr-form</span></div>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH19 ============ -->
+<section class="chapter" id="ch19">
+  <div class="chapter-eyebrow">অধ্যায় ১৯</div>
+  <h2>Perfekt (নিকট অতীতকাল)</h2>
+  <p>গঠন: <span class="de">haben/sein + Partizip II</span>। বেশিরভাগ verb-এর ক্ষেত্রে <span class="de">haben + ge-...-t/en</span>; গতিসূচক verb (gehen, fahren, kommen)-এর ক্ষেত্রে <span class="de">sein + ge-...-en</span>।</p>
+  <div class="ex"><span class="de">Ich habe gearbeitet.</span><span class="pron">ইশ হাবে গেয়ারবাইটেট।</span><span class="meaning">আমি কাজ করেছি।</span></div>
+  <div class="ex"><span class="de">Ich bin nach Berlin gefahren.</span><span class="pron">ইশ বিন নাখ বেয়ারলিন গেফারেন।</span><span class="meaning">আমি বার্লিনে গিয়েছিলাম।</span></div>
+  <div class="ex"><span class="de">Ich habe gegessen.</span><span class="pron">ইশ হাবে গেগেসেন।</span><span class="meaning">আমি খেয়েছি।</span></div>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH20 ============ -->
+<section class="chapter" id="ch20">
+  <div class="chapter-eyebrow">অধ্যায় ২০</div>
+  <h2>দৈনন্দিন বিষয়ভিত্তিক শব্দভান্ডার</h2>
+  <p class="lead">DW Akademie A1 কোর্সের অভিবাদন ও বিদায় পর্ব থেকে সংকলিত শব্দভান্ডার।</p>
+
+  <h4 class="sub-title">সাধারণ শব্দ</h4>
+  <table>
+    <tr><th>জার্মান</th><th>অর্থ</th></tr>
+    <tr><td class="de">auch</td><td>ও, এছাড়াও</td></tr>
+    <tr><td class="de">das Beispiel, die Beispiele</td><td>উদাহরণ</td></tr>
+    <tr><td class="de">danke / danke schön / danke sehr</td><td>ধন্যবাদ</td></tr>
+    <tr><td class="de">Es geht mir gut.</td><td>আমি ভালো আছি</td></tr>
+    <tr><td class="de">die Frau, die Frauen</td><td>নারী / মিসেস</td></tr>
+    <tr><td class="de">gut / besser / am besten</td><td>ভালো / আরও ভালো / সবচেয়ে ভালো</td></tr>
+    <tr><td class="de">Hallo! / Hey! / Hi!</td><td>হ্যালো!</td></tr>
+    <tr><td class="de">Herr</td><td>মিস্টার</td></tr>
+    <tr><td class="de">der Mann, die Männer</td><td>পুরুষ</td></tr>
+    <tr><td class="de">nicht / nicht so gut</td><td>না / খুব একটা ভালো না</td></tr>
+    <tr><td class="de">oder</td><td>অথবা</td></tr>
+    <tr><td class="de">schön</td><td>সুন্দর</td></tr>
+    <tr><td class="de">sehr gut / super</td><td>খুব ভালো / দারুণ</td></tr>
+    <tr><td class="de">Uhr</td><td>ঘণ্টা / ও'ক্লক</td></tr>
+    <tr><td class="de">und</td><td>এবং</td></tr>
+    <tr><td class="de">Wie geht es dir? / Wie geht es Ihnen?</td><td>তুমি/আপনি কেমন আছো? (অনানু./আনু.)</td></tr>
+  </table>
+
+  <h4 class="sub-title">স্থান, বস্তু ও পেশা</h4>
+  <table>
+    <tr><th>জার্মান</th><th>অর্থ</th></tr>
+    <tr><td class="de">die Bank, die Banken</td><td>ব্যাংক</td></tr>
+    <tr><td class="de">das Büro, die Büros</td><td>অফিস</td></tr>
+    <tr><td class="de">der Bus, die Busse</td><td>বাস</td></tr>
+    <tr><td class="de">der Computer</td><td>কম্পিউটার</td></tr>
+    <tr><td class="de">die E-Mail, die E-Mails</td><td>ইমেইল</td></tr>
+    <tr><td class="de">die Familie, die Familien</td><td>পরিবার</td></tr>
+    <tr><td class="de">der Flughafen, die Flughäfen</td><td>বিমানবন্দর</td></tr>
+    <tr><td class="de">die Gitarre, die Gitarren</td><td>গিটার</td></tr>
+    <tr><td class="de">das Hobby, die Hobbys</td><td>শখ</td></tr>
+    <tr><td class="de">das Hotel, die Hotels</td><td>হোটেল</td></tr>
+    <tr><td class="de">der Kaffee</td><td>কফি</td></tr>
+    <tr><td class="de">das Kino, die Kinos</td><td>সিনেমা হল</td></tr>
+    <tr><td class="de">das Konzert, die Konzerte</td><td>কনসার্ট</td></tr>
+    <tr><td class="de">die Kultur</td><td>সংস্কৃতি</td></tr>
+    <tr><td class="de">das Museum, die Museen</td><td>জাদুঘর</td></tr>
+    <tr><td class="de">die Musik</td><td>সঙ্গীত</td></tr>
+    <tr><td class="de">der Pilot / die Pilotin</td><td>পাইলট (পুরুষ/নারী)</td></tr>
+    <tr><td class="de">die Pizza</td><td>পিৎজা</td></tr>
+    <tr><td class="de">das Problem, die Probleme</td><td>সমস্যা</td></tr>
+    <tr><td class="de">das Restaurant</td><td>রেস্তোরাঁ</td></tr>
+    <tr><td class="de">die Spaghetti</td><td>স্প্যাগেটি</td></tr>
+    <tr><td class="de">der Sport</td><td>খেলাধুলা</td></tr>
+    <tr><td class="de">der Student / die Studentin</td><td>ছাত্র/ছাত্রী</td></tr>
+    <tr><td class="de">(etwas) studieren</td><td>অধ্যয়ন করা (বিশ্ববিদ্যালয়ে)</td></tr>
+    <tr><td class="de">der Supermarkt, die Supermärkte</td><td>সুপারমার্কেট</td></tr>
+    <tr><td class="de">das Taxi</td><td>ট্যাক্সি</td></tr>
+    <tr><td class="de">das Telefon</td><td>টেলিফোন</td></tr>
+    <tr><td class="de">das Theater</td><td>থিয়েটার</td></tr>
+    <tr><td class="de">die Toilette</td><td>টয়লেট</td></tr>
+    <tr><td class="de">die Universität / die Uni</td><td>বিশ্ববিদ্যালয়</td></tr>
+    <tr><td class="de">das Zentrum</td><td>কেন্দ্র / শহরের কেন্দ্র</td></tr>
+  </table>
+
+  <h4 class="sub-title">বিদায় ও সাহায্য চাওয়া</h4>
+  <table>
+    <tr><th>জার্মান</th><th>অর্থ</th></tr>
+    <tr><td class="de">Auf Wiedersehen.</td><td>বিদায় (আনুষ্ঠানিক)</td></tr>
+    <tr><td class="de">Bis bald.</td><td>শীঘ্রই দেখা হবে</td></tr>
+    <tr><td class="de">Gute Reise.</td><td>ভ্রমণ আনন্দদায়ক হোক!</td></tr>
+    <tr><td class="de">die Hilfe</td><td>সাহায্য</td></tr>
+    <tr><td class="de">Mach's gut!</td><td>নিজের খেয়াল রেখো!</td></tr>
+    <tr><td class="de">die Tasche, die Taschen</td><td>ব্যাগ</td></tr>
+    <tr><td class="de">Tschüss.</td><td>বিদায় (অনানুষ্ঠানিক)</td></tr>
+    <tr><td class="de">Vielen Dank!</td><td>অনেক ধন্যবাদ!</td></tr>
+    <tr><td class="de">Wir sehen uns.</td><td>পরে দেখা হবে</td></tr>
+    <tr><td class="de">Einen schönen Tag noch!</td><td>আপনার দিনটি ভালো কাটুক!</td></tr>
+    <tr><td class="de">Auf Wiederhören.</td><td>বিদায় (ফোনে, আনুষ্ঠানিক)</td></tr>
+    <tr><td class="de">Wie schreibt man das?</td><td>ওটার বানান কীভাবে করবেন?</td></tr>
+    <tr><td class="de">Bitte buchstabiere(n) das.</td><td>দয়া করে বানানটা বলুন</td></tr>
+    <tr><td class="de">Noch einmal, langsam bitte.</td><td>আরেকবার, ধীরে ধীরে বলুন</td></tr>
+  </table>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH21 ============ -->
+<section class="chapter" id="ch21">
+  <div class="chapter-eyebrow">অধ্যায় ২১</div>
+  <h2>অনুশীলনের কৌশল ও পরীক্ষা প্রস্তুতি</h2>
+
+  <h4 class="sub-title">চারটি মূল দক্ষতা কীভাবে অনুশীলন করবেন</h4>
+  <div class="ex"><span class="de">Hören</span> (শোনা)<span class="meaning">DW Akademie / Deutsche Welle অডিও, স্লো জার্মান পডকাস্ট শুনুন</span></div>
+  <div class="ex"><span class="de">Lesen</span> (পড়া)<span class="meaning">সহজ ডায়ালগ, ফর্ম, সাইনবোর্ড পড়ুন</span></div>
+  <div class="ex"><span class="de">Schreiben</span> (লেখা)<span class="meaning">ছোট বাক্য, পরিচিতি অনুচ্ছেদ, ফর্ম পূরণ অনুশীলন করুন</span></div>
+  <div class="ex"><span class="de">Sprechen</span> (বলা)<span class="meaning">আয়নার সামনে সংলাপ প্র্যাকটিস, ভাষা-বিনিময় পার্টনার খুঁজুন</span></div>
+
+  <h4 class="sub-title">ভিডিও কোর্স বানানোর পরামর্শ</h4>
+  <ul>
+    <li>প্রতিটি মডিউলকে একটি করে ভিডিও এপিসোড বানান (১০-১৫ মিনিট)</li>
+    <li>প্রতি এপিসোডে: (১) গ্রামার ব্যাখ্যা বাংলায়, (২) ৫-৭টি উদাহরণ বাক্য, (৩) উচ্চারণ অনুশীলন, (৪) ছোট quiz</li>
+    <li>এপিসোড শেষে আগের মডিউলের রিভিউ প্রশ্ন রাখুন যাতে ধারাবাহিকতা বজায় থাকে</li>
+    <li>A1 শেষে Goethe-Institut বা telc-এর মক টেস্ট দিয়ে দর্শকদের যাচাই করার সুযোগ দিন</li>
+  </ul>
+
+  <h4 class="sub-title">পরীক্ষার প্রস্তুতি (A1 সার্টিফিকেট)</h4>
+  <p>জনপ্রিয় A1 সার্টিফিকেশন সংস্থা: <span class="de">Goethe-Institut, telc, ÖSD</span>। পরীক্ষার অংশ: <span class="de">Hören, Lesen, Schreiben, Sprechen</span> — প্রতিটির জন্য আলাদা স্কোর।</p>
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<!-- ============ CH22 ============ -->
+<section class="chapter" id="ch22">
+  <div class="chapter-eyebrow">অধ্যায় ২২</div>
+  <h2>বাস্তব কথোপকথন (Audiokurs Dialogues)</h2>
+  <p class="lead">DW Akademie-র অডিও কোর্স থেকে নেওয়া বাস্তব কথোপকথন — আনুষ্ঠানিক ও অনানুষ্ঠানিক দুই ধরনের অভিবাদন-বিদায়ের অনুশীলনের জন্য।</p>
+
+  <h4 class="sub-title">অভিবাদন — আনুষ্ঠানিক (Formal)</h4>
+  <div class="dialogue">
+    <div class="line"><span class="speaker">Frau Kamp:</span> <span class="de">Guten Tag, Herr Schneider. Wie geht es Ihnen?</span></div>
+    <div class="trans">শুভ দিন, মিস্টার শ্নাইডার। আপনি কেমন আছেন?</div>
+    <div class="line"><span class="speaker">Herr Schneider:</span> <span class="de">Danke, gut. Und Ihnen?</span></div>
+    <div class="trans">ধন্যবাদ, ভালো আছি। আর আপনি?</div>
+    <div class="line"><span class="speaker">Frau Kamp:</span> <span class="de">Auch gut.</span></div>
+    <div class="trans">আমিও ভালো।</div>
+  </div>
+
+  <h4 class="sub-title">অভিবাদন — অনানুষ্ঠানিক (Informal)</h4>
+  <div class="dialogue">
+    <div class="line"><span class="speaker">David:</span> <span class="de">Hallo, Inga. Wie geht's?</span></div>
+    <div class="trans">হ্যালো, ইঙ্গা। কেমন আছো?</div>
+    <div class="line"><span class="speaker">Inga:</span> <span class="de">Super. Und dir?</span></div>
+    <div class="trans">দারুণ। আর তুমি?</div>
+    <div class="line"><span class="speaker">David:</span> <span class="de">Nicht so gut.</span></div>
+    <div class="trans">খুব একটা ভালো না।</div>
+  </div>
+  <div class="note">সময়ভেদে অভিবাদন: সকাল ৫টা-১১টা <span class="de">Guten Morgen</span>, বেলা ১১টা-সন্ধ্যা ৬টা <span class="de">Guten Tag</span>, সন্ধ্যা ৬টার পর <span class="de">Guten Abend</span>। পরিবার-বন্ধুদের জন্য প্রথম নাম ও অনানুষ্ঠানিক সম্বোধন (Hallo, Hey, Hi); অপরিচিত/আনুষ্ঠানিক ক্ষেত্রে <span class="de">Herr</span>/<span class="de">Frau</span> + পদবি।</div>
+
+  <h4 class="sub-title">বিদায় — অনানুষ্ঠানিক</h4>
+  <div class="dialogue">
+    <div class="line"><span class="speaker">Mann:</span> <span class="de">Tschüss, Martina. Gute Reise!</span></div>
+    <div class="trans">বিদায়, মার্টিনা। তোমার ভ্রমণ আনন্দদায়ক হোক!</div>
+    <div class="line"><span class="speaker">Frau:</span> <span class="de">Mach's gut, Herbert. Bis bald!</span></div>
+    <div class="trans">ভালো থেকো, হার্বার্ট। শীঘ্রই দেখা হবে!</div>
+  </div>
+
+  <h4 class="sub-title">বিদায় — আনুষ্ঠানিক</h4>
+  <div class="dialogue">
+    <div class="line"><span class="speaker">Frau:</span> <span class="de">Auf Wiedersehen, Herr Tillmanns. Gute Reise.</span></div>
+    <div class="trans">বিদায়, মিস্টার টিলম্যানস। আপনার যাত্রা শুভ হোক।</div>
+    <div class="line"><span class="speaker">Mann:</span> <span class="de">Danke schön! Auf Wiedersehen, Frau Scholl.</span></div>
+    <div class="trans">ধন্যবাদ! বিদায়, মিস শল।</div>
+  </div>
+
+  <h4 class="sub-title">নাম ও বানান জিজ্ঞাসা</h4>
+  <div class="dialogue">
+    <div class="line"><span class="speaker">Julia:</span> <span class="de">Hallo, wie ist dein Name?</span></div>
+    <div class="trans">হ্যালো, তোমার নাম কী?</div>
+    <div class="line"><span class="speaker">Lennard:</span> <span class="de">Mein Name ist Lennard.</span></div>
+    <div class="trans">আমার নাম লেনার্ড।</div>
+    <div class="line"><span class="speaker">Julia:</span> <span class="de">Lennard? Bitte buchstabiere das.</span></div>
+    <div class="trans">লেনার্ড? বানানটা একটু বলবেন?</div>
+    <div class="line"><span class="speaker">Lennard:</span> <span class="de">L-E-N-N-A-R-D.</span></div>
+    <div class="line"><span class="speaker">Julia:</span> <span class="de">Noch einmal bitte.</span></div>
+    <div class="trans">আরেকবার বলুন তো।</div>
+    <div class="line"><span class="speaker">Lennard:</span> <span class="de">L-E-N-N-A-R-D.</span></div>
+    <div class="line"><span class="speaker">Julia:</span> <span class="de">Ah ja. Danke.</span></div>
+    <div class="trans">আচ্ছা, বুঝতে পেরেছি। ধন্যবাদ।</div>
+  </div>
+
+  <h4 class="sub-title">পারিবারিক পরিচিতি (A1 Folge 4)</h4>
+  <div class="dialogue">
+    <div class="line"><span class="de">Wer ist Yara?</span> <span class="trans">— এটা কে?</span></div>
+    <div class="line"><span class="de">Deine Tante?</span> <span class="trans">— তোমার খালা?</span></div>
+    <div class="line"><span class="de">Und das ist meine Tante.</span> <span class="trans">— আর ইনি আমার খালা।</span></div>
+    <div class="line"><span class="de">Nein, Lisa ist nicht meine Mama. Sie ist meine Tante.</span> <span class="trans">— না, লিসা আমার মা নন; তিনি আমার খালা।</span></div>
+    <div class="line"><span class="de">Meine Mama fliegt nach Amerika, sie arbeitet da.</span> <span class="trans">— আমার মা বিমানে করে আমেরিকায় যাচ্ছেন; তিনি সেখানে কাজ করেন।</span></div>
+  </div>
+
+  <a class="to-top" href="#toc">↑ সূচিপত্রে ফিরুন</a>
+</section>
+
+<div class="colophon">— বইয়ের শেষ — শুভকামনা, Viel Erfolg! —</div>
+
+</div>
+</body>
+</html>
